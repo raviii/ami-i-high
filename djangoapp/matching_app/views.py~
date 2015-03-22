@@ -1,0 +1,8 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+def match(request):
+    [highFeatures, soberFeatures, queryFeatures] = [request.POST['highFeatures'], request.POST['soberFeatures'], request.POST['queryFeatures']]
+    return HttpResponseRedirect(reverse('matching_app:') "high features: %s" % highFeatures) 
