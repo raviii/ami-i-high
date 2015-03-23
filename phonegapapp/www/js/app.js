@@ -1,26 +1,10 @@
 var app = {
     
-    match: function(imgLocation1, imgLocation2) {
+    extractFeatures : function(imgLocation, featuresCallback) {
 	var PNG = require('png-js');
-	count = 0;	
-	features = {
-	    'feature1': none,
-	    'feature2': none,
-	};
-	PNG.decode(imgLocation1, function(pixels) {
-	    features["feature1"] = pixels;
-	    if(count==0)
-		count = 1;		    
-	    else
-		return features;	    
-	});
-	PNG.decode(imgLocation2, function(pixels) {
-	    features["feature2"] = pixels;
-	    if(count==0)
-		count = 1;		    
-	    else
-		return features;	    
-	});	
+	PNG.decode(imgLocation, function(pixels) {
+	    featuresCallback(pixels);
+	});		
     },
 
     findByName: function() {
