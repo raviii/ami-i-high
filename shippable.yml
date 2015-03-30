@@ -4,7 +4,9 @@ python:
    - 2.7
 
 install:
-   - cd downloads/numpy-1.9.2
+   - cd downloads
+   - tar -xzvf numpy.tar.gz
+   - cd numpy-1.9.2
    - sudo python setup.py install
 
 # Make folders for the reports
