@@ -4,11 +4,7 @@ python:
    - 2.7
 
 install:
-   - mkdir downloads
-   - cd downloads
-   - wget -O numpy.tar.gz http://downloads.sourceforge.net/project/numpy/NumPy/1.9.2/numpy-1.9.2.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fnumpy%2Ffiles%2F&ts=1427742438&use_mirror=kaz
-   - tar -xzvf numpy.tar.gz
-   - cd numpy
+   - cd downloads/numpy-1.9.2
    - sudo python setup.py install
 
 # Make folders for the reports
