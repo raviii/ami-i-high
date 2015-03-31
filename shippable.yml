@@ -16,5 +16,5 @@ before_script:
    - mkdir -p shippable/codecoverage
 
 script:
-   - python djangoapp/matching_app/core_functions/test.py -v 
+   - python ./djangoapp/matching_app/core_functions/test.py -v 
    
